@@ -1,0 +1,368 @@
+:root {
+  --primary: #1e40af;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --accent: #0284c7;
+  --text: #0f172a;
+  --muted: #475569;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+/* Navigasi */
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.badge-hero {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.35rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 0.92rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-white {
+  background: #ffffff;
+  color: var(--primary);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Konten Utama */
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem;
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  color: var(--primary);
+  margin-bottom: 1.1rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p,
+.card li {
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+/* Kotak Fitur */
+.tool-box {
+  background: var(--card);
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  background: #ffffff;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+.privacy-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.1rem;
+}
+
+/* Hasil Analisis */
+.result-box {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  display: none;
+}
+
+.result-box ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.risk-low {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #14532d;
+}
+
+.risk-med {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  color: #78350f;
+}
+
+.risk-high {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #7f1d1d;
+}
+
+/* Tabel */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 560px;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+
+/* Responsif HP */
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+}
